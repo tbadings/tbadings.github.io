@@ -18,7 +18,7 @@ Presentations at Conferences
 Workshop Presentations
 ------
 
-- *2023:* [FMAS](https://fmasworkshop.github.io/FMAS2023/), [BNAIC](https://bnaic2023.tudelft.nl/), [Lorentz Center: Predictive Maintenance - Let Data Maintain the Model](https://www.lorentzcenter.nl/site/index.php?pntHandler=WorkshopTemplatePage&pntType=ConPagina&id=1880)
+- *2023:* [FMAS](https://fmasworkshop.github.io/FMAS2023/), [BNAIC](https://bnaic2023.tudelft.nl/), [Lorentz Center: Predictive Maintenance - Let Data Maintain the Model](https://www.lorentzcenter.nl/site/index.php?pntHandler=WorkshopTemplatePage&pntType=ConPagina&id=1880), [ROCKS Workshop](https://www.modestchecker.net/rocks2023/)
 - *2022:* [NeurIPS Robot Learning](http://www.robot-learning.ml/2022/), [AAAI Fall Symposium on AI for Predictive Maintenance](https://autonlab.org/pmx_aaai_fss_2022/), [VeriProp](https://veriprop.github.io/2022/) (at CAV 2022), [Lorentz Center: Rigorous Automated Planning](https://www.lorentzcenter.nl/rigorous-automated-planning-2022.html), [ROCKS Workshop](https://www.modestchecker.net/rocks2022/)
 - *2021:* [Robotics 4 People](https://sites.google.com/view/r4p2021/?pli=1) (at Robotics: Science and Systems), SNR (2021), [SEN Symposium](https://www.sen-symposium.nl/)
 
@@ -30,7 +30,7 @@ Talks at other Universities
 
 External Reviewer
 ------
-**Conference program committees:** AAAI (2023), AAMAS (2023)
+**Conference program committees:** AAAI (2023), AAMAS (2023, 2024), IJCAI (2025), QEST Artifact evaluation (2025)
 
 **Conference reviewing:** AAAI, NeurIPS, AAMAS, ICML, ICAPS, ICRA, L4DC, TACAS, QEST, ATVA, PHASE, Formal Methods (FM), ADHS, ECC
 

@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Phd Candidate at <a href='https://www.ru.nl' target='blank'>Radboud University</a>, the Netherlands.
+subtitle: Postdoctoral research associate at University of Oxford.
 
 profile:
   align: right

@@ -20,6 +20,8 @@ My main research interests are broadly on the intersection between systems & con
 Between 2020 and 2024, I was a PhD candidate with the [Department of Software Science](https://sws.cs.ru.nl/) at the [Radboud University](https://www.ru.nl/english/) in Nijmegen, the Netherlands, under supervision of [Dr. Nils Jansen](http://www.cs.ru.nl/personal/nilsjansen/) and [Prof. dr. Marielle Stoelinga](https://wwwhome.ewi.utwente.nl/~marielle/). As a researcher, I am part of [PrimaVera](https://primavera-project.com/), an academic consortium on the topic of predictive maintenance. 
 Before starting my PhD in September 2020, I studied Industrial Engineering and Management at the University of Groningen, with a specialization in Smart Systems in Control and Automation.
 
+**Email:** thom.badings <at> cs.ox.ac.uk
+
 Research interests
 ------
 Verifying that the behaviour of complex engineering systems is safe and reliable is crucial for their deployment in the real world. 

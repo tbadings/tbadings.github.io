@@ -3,22 +3,25 @@ layout: page
 permalink: /activities/
 title: Activities
 description: A (non-exhaustive) overview of my professional activities.
-nav: true
+nav: false
 nav_order: 3
 ---
 
 Presentations at Conferences
 ------
 
-- *2024:* [TACAS](https://etaps.org/2024/conferences/tacas/), [ECC](https://ecc24.euca-ecc.org/)
-- *2023:* [AAAI](https://aaai-23.aaai.org/), [CAV](https://www.i-cav.org/2023/), [BNAIC](https://bnaic2023.tudelft.nl/)
-- *2023:* [AAAI](https://aaai.org/conference/aaai/aaai-22/), [CAV](https://i-cav.org/2022/)
-- *2021:* [NASA Formal Methods (NFM)](https://shemesh.larc.nasa.gov/NFM/history.html)
+- *2024:* **CAV**, **L4DC**, **CDC**
+- *2024:* **TACAS**, **ECC**
+- *2023:* **AAAI**, **CAV**, **BNAIC**
+- *2023:* **AAAI**, **CAV**
+- *2021:* **NFM**
 
 Workshop Presentations
 ------
 
-- *2023:* [FMAS](https://fmasworkshop.github.io/FMAS2023/), [BNAIC](https://bnaic2023.tudelft.nl/), [Lorentz Center: Predictive Maintenance - Let Data Maintain the Model](https://www.lorentzcenter.nl/site/index.php?pntHandler=WorkshopTemplatePage&pntType=ConPagina&id=1880), [ROCKS Workshop](https://www.modestchecker.net/rocks2023/)
+- *2023:* 
+
+[FMAS](https://fmasworkshop.github.io/FMAS2023/), [BNAIC](https://bnaic2023.tudelft.nl/), [Lorentz Center: Predictive Maintenance - Let Data Maintain the Model](https://www.lorentzcenter.nl/site/index.php?pntHandler=WorkshopTemplatePage&pntType=ConPagina&id=1880), [ROCKS Workshop](https://www.modestchecker.net/rocks2023/)
 - *2022:* [NeurIPS Robot Learning](http://www.robot-learning.ml/2022/), [AAAI Fall Symposium on AI for Predictive Maintenance](https://autonlab.org/pmx_aaai_fss_2022/), [VeriProp](https://veriprop.github.io/2022/) (at CAV 2022), [Lorentz Center: Rigorous Automated Planning](https://www.lorentzcenter.nl/rigorous-automated-planning-2022.html), [ROCKS Workshop](https://www.modestchecker.net/rocks2022/)
 - *2021:* [Robotics 4 People](https://sites.google.com/view/r4p2021/?pli=1) (at Robotics: Science and Systems), SNR (2021), [SEN Symposium](https://www.sen-symposium.nl/)
 

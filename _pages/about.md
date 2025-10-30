@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: Postdoctoral research associate at University of Oxford.
+subtitle: #Postdoctoral research associate at University of Oxford.
 
 profile:
   align: right
-  image: Thom.jpg
+  image: Thom2.jpeg
   image_circular: false # crops the image to make it circular
   address:
 
@@ -15,23 +15,23 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford.
-My main research interests are broadly on the intersection between systems & control, formal verification, and AI.
-Between 2020 and 2024, I was a PhD candidate with the [Department of Software Science](https://sws.cs.ru.nl/) at the [Radboud University](https://www.ru.nl/english/) in Nijmegen, the Netherlands, under supervision of [Dr. Nils Jansen](http://www.cs.ru.nl/personal/nilsjansen/) and [Prof. dr. Marielle Stoelinga](https://wwwhome.ewi.utwente.nl/~marielle/). As a researcher, I am part of [PrimaVera](https://primavera-project.com/), an academic consortium on the topic of predictive maintenance. 
-Before starting my PhD in September 2020, I studied Industrial Engineering and Management at the University of Groningen, with a specialization in Smart Systems in Control and Automation.
+I am a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford, working with Prof. dr. Alessandro Abate.
+Previously, I was a PhD student in the [Department of Software Science](https://sws.cs.ru.nl/) at Radboud University in Nijmegen, the Netherlands, under supervision of Dr. Nils Jansen and Prof. dr. Marielle Stoelinga. 
+I defended my PhD thesis (*Cum Laude*, awarded to around 5% of PhD theses in the Netherlands) titled *[Robust Verification of Stochastic Systems: Guarantees in the Presence of Uncertainty](/assets/pdf/Badings_PhD_Thesis.pdf)* in March 2025.
 
-**Email:** thom.badings <at> cs.ox.ac.uk
+I am a research associate in the [Erlangen AI Hub](https://erlangenhub.ox.ac.uk/) on the mathematical foundations of AI.
+During my PhD, I was a member of [PrimaVera](https://primavera-project.com/), an academic consortium on the topic of predictive maintenance.
 
-Research interests
+You can reach me at thom.badings?cs.ox.ac.uk.
+
+Research Goal
 ------
-Verifying that the behaviour of complex engineering systems is safe and reliable is crucial for their deployment in the real world. 
-For example, we want to prove that an autonomous drone will safely reach its target, that a manufacturing system will not break down, or that a power system will not congest. 
-Such systems are becoming increasingly intelligent with more AI components, such as neural network controllers.
-As a result, accurately modelling these systems becomes challenging, and uncertainty about their behaviour is inevitable.
-Yet, engineering systems are deployed in safety-critical environments, where guarantees about system behaviour are imperative. 
-However, traditional methods for the analysis of such systems are often incapable of dealing with this uncertainty. 
-Thus, my research is motivated by the following key question:
 
-**How can we guarantee the performance, reliability, and safety of complex engineering systems, despite uncertainty about their dynamics and the environments in which these systems are deployed?**
+There is a quest for **reliable autonomy in control systems:** An autonomous drone must not crash under adverse weather, and a smart energy grid must remain stable despite fluctuating demand and supply. 
+Growing complexity and uncertainty about systems and their environment have created a gap between the systems we *build* and the systems we can *reliably control*. 
+My long-term research goal is to close this gap.
 
-I am interested to answer this type of question for applications in several domains, including robotic systems, predictive maintenance, and electrical power systems.
+Achieving this goal requires reasoning about control decisions in systems. 
+This reasoning uses, in particular, **dynamical systems** and **Markov decision processes.**
+These models are studied across **control theory**, **formal methods**, and **artificial intelligence**. 
+My research spans and has impact in all three communities. 

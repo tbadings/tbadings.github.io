@@ -9,7 +9,9 @@ layout: default
             <p class="post-description">{{ page.description }}</p>
           </header>
 
-          <article>
+          You can access my latest curriculum vitae <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}">via this link</a>.
+
+          <!-- <article>
             <div class="cv">
               {% for entry in site.data.cv %}
                 <div class="card mt-3 p-3">
@@ -30,6 +32,6 @@ layout: default
                 </div>
               {% endfor %}
               </div>
-          </article>
+          </article> -->
 
         </div>

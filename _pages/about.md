@@ -15,8 +15,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford, working with Prof. dr. Alessandro Abate.
-Previously, I was a PhD student in the [Department of Software Science](https://sws.cs.ru.nl/) at Radboud University in Nijmegen, the Netherlands, under supervision of Dr. Nils Jansen and Prof. dr. Marielle Stoelinga. 
+I am a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford, working with Prof. Alessandro Abate.
+Previously, I was a PhD student in the [Department of Software Science](https://sws.cs.ru.nl/) at Radboud University in Nijmegen, the Netherlands, under supervision of Prof. Nils Jansen and Prof. Marielle Stoelinga. 
 I defended my [PhD thesis titled "Robust Verification of Stochastic Systems: Guarantees in the Presence of Uncertainty"](/assets/pdf/Badings_PhD_Thesis.pdf) in March 2025 (*Cum Laude*, awarded to around 5% of PhD theses in the Netherlands).
 
 I am a research associate in the [Erlangen AI Hub](https://erlangenhub.ox.ac.uk/) on the mathematical foundations of AI.

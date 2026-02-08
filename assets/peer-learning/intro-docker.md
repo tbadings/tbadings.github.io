@@ -137,14 +137,13 @@ docker images
 We can run the busybox image with:
 
 ```
-Run busybox:
 docker run busybox 
 ```
 
-This doesn't do anything, because we did not give a command when running the container. Instead, let's now try:
+This doesn't do anything because we did not give a command when running the container. Instead, let's now try:
 
 ```
-docker run busybox echo "hello from busybox”
+docker run busybox echo "hello from busybox"
 ```
 
 Which should indeed show the message we asked for. Still, notice that we still cannot really do something manually within the container. This is where the interactive mode is for:
@@ -202,7 +201,7 @@ What's nice is that changes are immediately deployed. Try it yourself: change th
 
 ## Running from Docker hub
 
-Docker Hub is the online repository where you can upload your images to. Let's demonstrate how Docker hub works based on the image for one of our recent papers. This image is also archived on Zenodo at https://zenodo.org/records/15314846.
+Docker Hub is the online repository where you can upload your images to. Let's demonstrate how Docker Hub works based on the image for one of our recent papers. This image is also archived on Zenodo at https://zenodo.org/records/15314846.
 
 Running a Container and Storing Results on the Host
 
@@ -219,7 +218,7 @@ Running a Container and Storing Results on the Host
    - `target=/home/lograsm/output` → sync with this folder inside the container
 3. Let's run a simple benchmark within the Docker container. This should take around a minute:
    ```
-   python run.py --model LinearSystem --probability_bound 0.9999 --pretrain_method PPO_JAX --pretrain_total_steps 100000 --mesh_loss 0.001 --exp_certificate
+   python run.py --model LinearSystem --probability_bound 0.9999 --pretrain_method PPO_JAX --pretrain_total_steps 100000 --mesh_loss 0.001 --exp_certificate --verify_batch_size 3000
    ```
 4. The results for this benchmark are stored in the `/home/lograsm/output` folder. But because we bound the current host directory to this output folder, these results are automatically stored on the host.
 
@@ -240,7 +239,7 @@ docker volume create log-data
 Then, create a container that uses this volume:
 
 ```
-docker run --mount type=bind,source="$(pwd)",target=/home/lograsm/output -it -v log-data:/home/lograsm thombadings/lograsm:v1-arm
+docker run -it -v log-data:/home/lograsm thombadings/lograsm:v1-arm
 ```
 
 What do these different terms mean?
@@ -264,13 +263,15 @@ docker build --platform=linux/arm64 -f Dockerfile-arm --tag thombadings/lograsm:
 
 Here, `linux/arm64` is the platform we build for, and `Dockerfile-arm` is the Dockerfile we build from. The tag is structured as `<HOST>/<PATH>:<TAG>`.
 
-After building the image, we can push it to Docker Hub (this, of course, requires access to push to this repository):
+After building the image, we can push it to Docker Hub:
 
 ```
 docker push thombadings/lograsm:v2-arm
 ```
 
-Alternatively, we can also export the image to a compressed folder, for example if we want to upload it to Zenodo:
+Of course, this requires access to push to this repository, so this command will not work for you. Instead, change `thombadings` to your Docker Hub identifier (much like you would push something to GitHub).
+
+Alternatively, we can also export the image to a compressed folder, for example, if we want to upload it to Zenodo:
 
 ```
 sudo docker save thombadings/lograsm:v2-arm > exported_image.tar
@@ -290,7 +291,7 @@ For the logRASM image (i.e., the running example from above), we use the CUDA li
 FROM ubuntu:latest
 WORKDIR /home
 USER root
-RUN apt-get update && apt-get install -y wget git
+RUN apt-get update && apt-get install -y wget git
 
 # Miniconda
 ENV PATH="/home/miniconda3/bin:$PATH"

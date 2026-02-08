@@ -1,4 +1,4 @@
-<img width="112" height="39" alt="image" src="https://github.com/user-attachments/assets/058eefa0-abef-4072-a386-e3798fc8000b" /># Docker for Reproducible (AI) Research  
+<img width="537" height="388" alt="image" src="https://github.com/user-attachments/assets/4e7c0002-eaad-4a4a-a81a-87400fd520da" /><img width="336" height="30" alt="image" src="https://github.com/user-attachments/assets/1b81b8a0-141a-4bf7-b518-dede8ea47a50" /><img width="282" height="47" alt="image" src="https://github.com/user-attachments/assets/b89245ab-4a0b-472d-aab8-fee54fa04e54" /><img width="755" height="30" alt="image" src="https://github.com/user-attachments/assets/3cf261c6-9e20-4c3a-854f-ea4d902b91e1" /><img width="112" height="39" alt="image" src="https://github.com/user-attachments/assets/058eefa0-abef-4072-a386-e3798fc8000b" /># Docker for Reproducible (AI) Research  
 *A One-Hour Introduction*
 
 **Thom Badings**  
@@ -197,3 +197,126 @@ http://localhost:8080/al-folio/
 ```
 
 What's nice is that changes are immediately deployed. Try it yourself: change the text in `_pages/about.md`, save the file, and refresh the website in the browser!
+
+---
+
+## Running from Docker hub
+
+Docker Hub is the online repository where you can upload your images to. Let's demonstrate how Docker hub works based on the image for one of our recent papers. This image is also archived on Zenodo at https://zenodo.org/records/15314846.
+
+Running a Container and Storing Results on the Host
+
+1. Navigate to the folder where you want to store results
+2. Run the following commands:
+```
+docker pull thombadings/lograsm:v1-arm
+docker run --mount type=bind,source="$(pwd)",target=/home/lograsm/output -it thombadings/lograsm:v1-arm
+```
+
+- `-it` → interactive mode
+- `thombadings/lograsm:v1-arm` → image
+- `source="$(pwd)"` → bind to current host directory
+- `target=/home/lograsm/output` → sync with this folder inside the container
+
+---
+
+## Persistently storing data
+
+By default, Docker does not store data after exiting a container. This can cause unexpected behavior, especially when running experiments. Volumes can be used to store data, also after exiting the container.
+
+First, create a volume:
+
+```
+docker volume create log-data
+```
+
+Then, create a container that uses this volume:
+
+```
+docker run --mount type=bind,source="$(pwd)",target=/home/lograsm/output -it -v log-data:/home/lograsm thombadings/lograsm:v1-arm
+```
+
+What do these different terms mean?
+- `-v` → the volume flag
+- `log-data` → the name of the container
+- `/home/lograsm` → folder (within the container) to store in volume
+
+When to use `--mount` versus `-v`?
+- Mount ”binds” a folder on the host to a folder in the container (overwriting its content)
+- A volume stores all the data from the given container folder into a directory within Docker’s storage directory (not directly visible in, e.g., Finder)
+
+---
+
+## Build and share images
+
+After making changes to the source code, you need to rebuild the Docker image. Let's continue with the image from the previous slides, and build a new version for arm-based architectures:
+
+```
+docker build --platform=linux/arm64 -f Dockerfile-arm --tag thombadings/lograsm:v2-arm .
+```
+
+Here, `linux/arm64` is the platform we build for, and `Dockerfile-arm` is the Dockerfile we build from. The tag is structured as `<HOST>/<PATH>:<TAG>`.
+
+After building the image, we can push it to Docker Hub (this, of course, requires access to push to this repository):
+
+```
+docker push thombadings/lograsm:v2-arm
+```
+
+Alternatively, we can also export the image to a compressed folder, for example if we want to upload it to Zenodo:
+
+```
+sudo docker save thombadings/lograsm:v2-arm > exported_image.tar
+```
+
+---
+
+## Docker with CUDA
+
+Docker can be used in combination with CUDA. When doing so, Docker will use the CUDA libraries installed within the container, but it will rely on the CUDA drivers on the host.
+
+The following page on the NVIDIA website provides important information and Docker images that have the CUDA libraries pre-installed: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html
+
+For the logRASM image (i.e., the running example from above), we use the CUDA libraries installed with JAX. The underlying Dockerfile looks as follows:
+
+```
+FROM ubuntu:latest
+WORKDIR /home
+USER root
+RUN apt-get update && apt-get install -y wget git
+
+# Miniconda
+ENV PATH="/home/miniconda3/bin:$PATH"
+ARG PATH="/home/miniconda3/bin:$PATH"
+RUN mkdir -p miniconda3 \
+&& wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+-O /home/miniconda3/miniconda.sh \
+&& bash /home/miniconda3/miniconda.sh -b -u -p /home/miniconda3 \
+&& rm -f /home/miniconda3/miniconda.sh \
+&& /home/miniconda3/bin/conda init bash \
+&& /home/miniconda3/bin/pip install --upgrade pip
+RUN /home/miniconda3/bin/conda install -y ipython
+
+# JAX
+RUN /home/miniconda3/bin/pip install --upgrade "jax[cuda12]"
+
+# Build artifact dependencies
+#############
+RUN mkdir /home/lograsm
+WORKDIR /home/lograsm
+
+# Obtain requirements and install them
+COPY requirements_cpu.txt requirements_gpu.txt
+RUN /home/miniconda3/bin/pip install --upgrade pip
+RUN /home/miniconda3/bin/pip install --no-cache-dir -r requirements_cpu.txt
+
+# Copy all files
+WORKDIR /home/lograsm
+COPY . .
+```
+
+---
+
+## Summary
+
+So, in summary, use Docker when you want to publish code artifacts for your papers, and if you want to make it as easy as possible for others to run your code without the dependency hell.

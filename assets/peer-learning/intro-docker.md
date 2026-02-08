@@ -1,4 +1,4 @@
-<img width="537" height="388" alt="image" src="https://github.com/user-attachments/assets/4e7c0002-eaad-4a4a-a81a-87400fd520da" /><img width="336" height="30" alt="image" src="https://github.com/user-attachments/assets/1b81b8a0-141a-4bf7-b518-dede8ea47a50" /><img width="282" height="47" alt="image" src="https://github.com/user-attachments/assets/b89245ab-4a0b-472d-aab8-fee54fa04e54" /><img width="755" height="30" alt="image" src="https://github.com/user-attachments/assets/3cf261c6-9e20-4c3a-854f-ea4d902b91e1" /><img width="112" height="39" alt="image" src="https://github.com/user-attachments/assets/058eefa0-abef-4072-a386-e3798fc8000b" /># Docker for Reproducible (AI) Research  
+# Docker for Reproducible (AI) Research  
 *A One-Hour Introduction*
 
 **Thom Badings**  
@@ -206,17 +206,24 @@ Docker Hub is the online repository where you can upload your images to. Let's d
 
 Running a Container and Storing Results on the Host
 
-1. Navigate to the folder where you want to store results
+1. Navigate to the folder where you want to store results (choose an empty folder for this!)
 2. Run the following commands:
-```
-docker pull thombadings/lograsm:v1-arm
-docker run --mount type=bind,source="$(pwd)",target=/home/lograsm/output -it thombadings/lograsm:v1-arm
-```
+   ```
+   docker pull thombadings/lograsm:v1-arm
+   docker run --mount type=bind,source="$(pwd)",target=/home/lograsm/output -it thombadings/lograsm:v1-arm
+   ```
+   Let's break down this command:
+   - `-it` → interactive mode
+   - `thombadings/lograsm:v1-arm` → image
+   - `source="$(pwd)"` → bind to current host directory
+   - `target=/home/lograsm/output` → sync with this folder inside the container
+3. Let's run a simple benchmark within the Docker container. This should take around a minute:
+   ```
+   python run.py --model LinearSystem --probability_bound 0.9999 --pretrain_method PPO_JAX --pretrain_total_steps 100000 --mesh_loss 0.001 --exp_certificate
+   ```
+4. The results for this benchmark are stored in the `/home/lograsm/output` folder. But because we bound the current host directory to this output folder, these results are automatically stored on the host.
 
-- `-it` → interactive mode
-- `thombadings/lograsm:v1-arm` → image
-- `source="$(pwd)"` → bind to current host directory
-- `target=/home/lograsm/output` → sync with this folder inside the container
+
 
 ---
 

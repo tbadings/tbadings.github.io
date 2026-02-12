@@ -228,7 +228,7 @@ Running a Container and Storing Results on the Host
 
 ## Persistently storing data
 
-By default, Docker does not store data after exiting a container. This can cause unexpected behavior, especially when running experiments. Volumes can be used to store data, also after exiting the container.
+By default, Docker stores files within the container, which makes it tricky when you want to share files with others or use the same files on two containers. Volumes can be used to store data outside the container. Essentially, you can see a volume as an external storage device (like an SSD).
 
 First, create a volume:
 

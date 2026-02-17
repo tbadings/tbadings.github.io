@@ -1,11 +1,14 @@
-# Docker for Reproducible (AI) Research  
-*A One-Hour Introduction*
+# Docker for Reproducible (AI) Research
 
 **Thom Badings**  
-Feb 12, 2026  
-University of Oxford
+February 12, 2026  
+Part of the *Fundamental Skills Workshop* series of the Erlangen AI Hub, 
 
 ---
+
+## About this file
+
+This file complements the slides of the corresponding workshop series. Below, you will find all the commands used during the workshop, along with some of the same material you also find in the slides.
 
 ## “But it works on my machine!”
 
@@ -13,7 +16,7 @@ Typical situation in research projects:
 
 - Writing code for research projects
 - Conda environment
-- Python version (e.g. 3.12)
+- Python version (e.g., 3.12)
 - Python packages (NumPy, Matplotlib, JAX, …)
 - Other dependencies (C++ libraries, …)
 

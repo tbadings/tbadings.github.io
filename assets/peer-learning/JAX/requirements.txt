@@ -1,0 +1,6 @@
+pillow
+numpy
+tyro
+jaxtyping
+git+https://github.com/matomatical/matthewplotlib.git
+einops

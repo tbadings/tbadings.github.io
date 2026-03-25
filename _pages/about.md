@@ -19,7 +19,7 @@ I am a postdoctoral research fellow at RWTH Aachen University, Germany.
 I work within the [Software Modeling and Verification Group](https://moves.rwth-aachen.de/) (headed by Prof. Joost-Pieter Katoen) and the Institute for [Data Science in Mechanical Engineering](https://www.dsme.rwth-aachen.de/) (headed by Prof. Sebastian Trimpe). 
 
 From Nov 2024 to March 2026, I was a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford, working with Prof. Alessandro Abate.
-I was a PhD student in the [Department of Software Science](https://sws.cs.ru.nl/) at Radboud University in Nijmegen, the Netherlands, under supervision of Prof. Nils Jansen and Prof. Marielle Stoelinga. 
+From 2020 to 2024, I was a PhD student in the [Department of Software Science](https://sws.cs.ru.nl/) at Radboud University in Nijmegen, the Netherlands, under supervision of Prof. Nils Jansen and Prof. Marielle Stoelinga. 
 I defended my [PhD thesis titled "Robust Verification of Stochastic Systems: Guarantees in the Presence of Uncertainty"](/assets/pdf/Badings_PhD_Thesis.pdf) in March 2025 (*Cum Laude*, awarded to around 5% of PhD theses in the Netherlands).
 
 In Oxford, I was a research associate in the [Erlangen AI Hub](https://erlangenhub.ox.ac.uk/) on the mathematical foundations of AI.

@@ -4,5 +4,5 @@ permalink: /cv/
 title: Curriculum Vitae
 nav: true
 nav_order: 4
-cv_pdf: CV-2026-03-25.pdf
+cv_pdf: CV-2026-05-29.pdf
 ---

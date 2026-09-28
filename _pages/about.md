@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: #Postdoctoral research associate at University of Oxford.
+subtitle: #n/a.
 
 profile:
   align: right
@@ -18,14 +18,16 @@ social: true  # includes social icons at the bottom of the page
 I am a postdoctoral research fellow at RWTH Aachen University, Germany.
 I work within the [Software Modeling and Verification Group](https://moves.rwth-aachen.de/) (headed by Prof. Joost-Pieter Katoen) and the Institute for [Data Science in Mechanical Engineering](https://www.dsme.rwth-aachen.de/) (headed by Prof. Sebastian Trimpe). 
 
-From Nov 2024 to March 2026, I was a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford, working with Prof. Alessandro Abate.
+From Nov 2024 to March 2026, I was a postdoctoral research associate with the [Oxford Control and Verification Group](https://oxcav.web.ox.ac.uk/) at the University of Oxford, working with Prof. Alessandro Abate, and where I was a researcher in the [Erlangen AI Hub](https://erlangenhub.ox.ac.uk/) on the mathematical foundations of AI.
 From 2020 to 2024, I was a PhD student in the [Department of Software Science](https://sws.cs.ru.nl/) at Radboud University in Nijmegen, the Netherlands, under supervision of Prof. Nils Jansen and Prof. Marielle Stoelinga. 
+During my PhD, I was a member of [PrimaVera](https://primavera-project.com/), an academic consortium on predictive maintenance.
+
 I defended my [PhD thesis titled "Robust Verification of Stochastic Systems: Guarantees in the Presence of Uncertainty"](/assets/pdf/Badings_PhD_Thesis.pdf) in March 2025 (*Cum Laude*, awarded to around 5% of PhD theses in the Netherlands).
+For my PhD thesis, I received multiple awards:
 
-For my PhD thesis, I received the [ETAPS Doctoral Dissertation Award 2026](https://etaps.org/awards/doctoral-dissertation/), the [KHMW Kees Schouhamer Immink Prijs 2026](https://khmw.nl/khmw-kees-schouhamer-immink-proefschriftprijs/), and an honorable mention for the [AAAI/ACM SIGAI Doctoral Dissertation Award 2025](https://aaai.org/about-aaai/aaai-awards/aaai-acm-sigai-doctoral-dissertation-award/).
-
-In Oxford, I was a research associate in the [Erlangen AI Hub](https://erlangenhub.ox.ac.uk/) on the mathematical foundations of AI.
-During my PhD, I was a member of [PrimaVera](https://primavera-project.com/), an academic consortium on the topic of predictive maintenance.
+1. The [ETAPS Doctoral Dissertation Award 2026](https://etaps.org/awards/doctoral-dissertation/),
+2. The [KHMW Kees Schouhamer Immink Prijs 2026](https://khmw.nl/khmw-kees-schouhamer-immink-proefschriftprijs/)
+3. An honorable mention for the [AAAI/ACM SIGAI Doctoral Dissertation Award 2025](https://aaai.org/about-aaai/aaai-awards/aaai-acm-sigai-doctoral-dissertation-award/).
 
 You can reach me at thom.badings ? cs.rwth-aachen.de
 

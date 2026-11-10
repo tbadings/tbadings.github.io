@@ -27,7 +27,8 @@ For my PhD thesis, I received multiple awards:
 
 1. The [ETAPS Doctoral Dissertation Award 2026](https://etaps.org/awards/doctoral-dissertation/),
 2. The [KHMW Kees Schouhamer Immink Prijs 2026](https://khmw.nl/khmw-kees-schouhamer-immink-proefschriftprijs/)
-3. An honorable mention for the [AAAI/ACM SIGAI Doctoral Dissertation Award 2025](https://aaai.org/about-aaai/aaai-awards/aaai-acm-sigai-doctoral-dissertation-award/).
+3. The [IPA Dissertation Award](https://ipa.win.tue.nl/?page_id=565)
+4. An honorable mention for the [AAAI/ACM SIGAI Doctoral Dissertation Award 2025](https://aaai.org/about-aaai/aaai-awards/aaai-acm-sigai-doctoral-dissertation-award/).
 
 You can reach me at thom.badings ? cs.rwth-aachen.de
 
